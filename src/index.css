@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #234BCC;
+  --color-primary-dark: #210F3C;
+  --color-secondary: #122466;
+  --color-accent-warm: #F42F4C;
+  --color-accent-light: #234BCC;
+  --color-success: #20D070;
+  --color-bg: #FCFCFC;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #122466;
+  --color-text-secondary: #475569;
+  --color-text-dark: #210F3C;
+  --color-border: #E2E8F0;
+
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+body {
+  @apply bg-bg text-text-primary font-body antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading tracking-tight;
+}
+
+/* Custom Soft Shadows */
+.shadow-soft {
+  box-shadow: 0 8px 30px -4px rgba(4, 4, 74, 0.08);
+}
+
+.shadow-soft-lg {
+  box-shadow: 0 16px 50px -6px rgba(4, 4, 74, 0.12);
+}
+
+.shadow-soft-xl {
+  box-shadow: 0 24px 70px -8px rgba(4, 4, 74, 0.15);
+}
+
+

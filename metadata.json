@@ -1,0 +1,6 @@
+{
+  "name": "Akademia Profesionale Heimerer",
+  "description": "Vocational Education College in Kosovo featuring the German Dual Study System.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

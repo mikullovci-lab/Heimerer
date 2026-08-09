@@ -28,9 +28,9 @@ export function Programs({ onApplyClick }: { onApplyClick?: (programId: string) 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-sm font-semibold tracking-widest text-primary uppercase mb-2">Accredited Programs</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Our Educational Solutions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Our Educational <span className="text-[#00aa8a]">Solutions</span></h2>
           <p className="text-base sm:text-lg text-text-secondary">
-            Comprehensive vocational training specialized for Kosovo's growing clinical healthcare sector.
+            Comprehensive vocational training specialized for Kosova's growing clinical healthcare sector.
           </p>
         </div>
 

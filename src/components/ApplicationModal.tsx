@@ -430,7 +430,7 @@ export function ApplicationModal({ isOpen, onClose, initialProgram }: Applicatio
                       </div>
                       <div>
                         <div className="text-[10px] uppercase font-bold text-primary tracking-wider">Selected Program</div>
-                        <div className="text-xs sm:text-sm font-bold text-primary-dark">{selectedProgObj?.titleSq}</div>
+                        <div className="text-xs sm:text-sm font-bold text-primary-dark">{selectedProgObj?.title}</div>
                       </div>
                     </div>
                   </div>
@@ -454,7 +454,7 @@ export function ApplicationModal({ isOpen, onClose, initialProgram }: Applicatio
                     <button
                       type="button"
                       onClick={handleNext}
-                      className="bg-primary hover:bg-secondary text-white font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer shadow-soft flex items-center gap-1.5 text-sm ml-auto"
+                      className="bg-[#162f7a] hover:bg-[#0f2259] text-white font-semibold px-6 py-3 rounded-full transition-colors duration-200 cursor-pointer shadow-soft flex items-center gap-1.5 text-sm ml-auto"
                     >
                       Next <ArrowRight size={16} />
                     </button>
@@ -462,7 +462,7 @@ export function ApplicationModal({ isOpen, onClose, initialProgram }: Applicatio
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="bg-success hover:bg-emerald-600 disabled:bg-gray-400 text-white font-semibold px-8 py-3 rounded-full transition-all duration-200 cursor-pointer shadow-soft flex items-center gap-1.5 text-sm ml-auto"
+                      className="bg-[#00aa8a] hover:bg-[#00967a] disabled:bg-gray-400 text-white font-semibold px-8 py-3 rounded-full transition-all duration-200 cursor-pointer shadow-soft flex items-center gap-1.5 text-sm ml-auto"
                     >
                       {isSubmitting ? (
                         <>Submitting...</>

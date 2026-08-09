@@ -57,8 +57,8 @@ export function Hero({ onApplyClick }: { onApplyClick?: () => void }) {
       alt: "Professional Nursing Associate - Akademia Profesionale Heimerer",
       subtitle: "START YOUR FUTURE AS",
       title: "PROFESSIONAL NURSING ASSOCIATE",
-      buttonColor: "bg-[#0084FF]",
-      buttonHoverColor: "hover:bg-[#0070E0]",
+      buttonColor: "bg-[#00aa8a]",
+      buttonHoverColor: "hover:bg-[#00967a]",
       buttonText: "REGISTER NOW"
     },
     {
@@ -66,8 +66,8 @@ export function Hero({ onApplyClick }: { onApplyClick?: () => void }) {
       alt: "Physiotherapy Assistant - Akademia Profesionale Heimerer",
       subtitle: "START YOUR FUTURE AS",
       title: "PHYSIOTHERAPY ASSISTANT",
-      buttonColor: "bg-[#F95700]",
-      buttonHoverColor: "hover:bg-[#E04E00]",
+      buttonColor: "bg-[#00aa8a]",
+      buttonHoverColor: "hover:bg-[#00967a]",
       buttonText: "REGISTER NOW"
     },
     {
@@ -75,8 +75,8 @@ export function Hero({ onApplyClick }: { onApplyClick?: () => void }) {
       alt: "Medical Laboratory Technician - Akademia Profesionale Heimerer",
       subtitle: "START YOUR FUTURE AS",
       title: "MEDICAL LABORATORY TECHNICIAN",
-      buttonColor: "bg-[#4EA81A]",
-      buttonHoverColor: "hover:bg-[#439316]",
+      buttonColor: "bg-[#00aa8a]",
+      buttonHoverColor: "hover:bg-[#00967a]",
       buttonText: "REGISTER NOW"
     }
   ];
@@ -210,7 +210,7 @@ export function Hero({ onApplyClick }: { onApplyClick?: () => void }) {
                     setCurrentIndex(index);
                   }}
                   className={`h-2 rounded-full transition-all cursor-pointer ${
-                    index === currentIndex ? 'bg-[#0084FF] w-5 sm:w-6' : 'bg-gray-300 hover:bg-gray-400 w-2'
+                    index === currentIndex ? 'bg-[#00aa8a] w-5 sm:w-6' : 'bg-gray-300 hover:bg-gray-400 w-2'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />

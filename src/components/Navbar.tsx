@@ -30,7 +30,7 @@ export function Navbar({ onApplyClick }: { onApplyClick?: () => void }) {
             </button>
             <button 
               onClick={onApplyClick}
-              className="bg-primary-dark hover:bg-secondary text-white px-6 py-2.5 rounded-full font-medium text-sm transition-colors cursor-pointer flex items-center gap-2"
+              className="bg-[#00aa8a] hover:bg-[#00967a] text-white px-6 py-2.5 rounded-full font-medium text-sm transition-colors cursor-pointer flex items-center gap-2 shadow-sm"
             >
               Apply Now <ArrowRight size={16} />
             </button>
@@ -66,7 +66,7 @@ export function Navbar({ onApplyClick }: { onApplyClick?: () => void }) {
                   setIsOpen(false);
                   onApplyClick?.();
                 }}
-                className="bg-primary-dark text-white px-4 py-2.5 rounded-full font-medium cursor-pointer"
+                className="bg-[#00aa8a] hover:bg-[#00967a] text-white px-4 py-2.5 rounded-full font-medium cursor-pointer"
               >
                 Apply Now
               </button>

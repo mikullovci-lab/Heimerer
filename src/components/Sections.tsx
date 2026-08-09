@@ -5,15 +5,15 @@ export function WhatIsDualEducation() {
   return (
     <section className="py-6 overflow-x-hidden bg-bg">
       <div className="max-w-[96%] xl:max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-[2.5rem] overflow-hidden bg-[#0c0a3e] text-white p-8 sm:p-12 lg:p-16 border border-border/30">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent-warm/15 via-transparent to-transparent pointer-events-none"></div>
+        <div className="relative rounded-[2.5rem] overflow-hidden bg-[#162f7a] text-white p-8 sm:p-12 lg:p-16 border border-border/30">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#00aa8a]/20 via-transparent to-transparent pointer-events-none"></div>
           <div className="relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
             <div className="lg:w-1/3 text-center lg:text-left">
               <h2 className="text-3xl md:text-4xl font-bold text-white font-heading leading-tight">
                 What is <br className="hidden lg:block"/>
-                <span className="text-accent-warm">Dual Education?</span>
+                <span className="text-[#00aa8a]">Dual Education?</span>
               </h2>
-              <div className="w-12 h-1 bg-accent-warm mt-4 rounded-full mx-auto lg:mx-0"></div>
+              <div className="w-12 h-1 bg-[#00aa8a] mt-4 rounded-full mx-auto lg:mx-0"></div>
             </div>
             <div className="lg:w-2/3 grid sm:grid-cols-2 gap-6 lg:gap-8 text-white/95 text-base sm:text-lg leading-snug font-normal text-center sm:text-left">
               <p className="leading-snug">
@@ -37,11 +37,11 @@ export function ProgramDetails() {
         <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
           <div className="md:w-1/2 text-center md:text-left">
             <h3 className="text-3xl md:text-4xl font-bold text-primary-dark leading-tight font-heading">
-              A modern curriculum<br/> <span className="text-primary">designed for your future</span>
+              A modern curriculum<br/> <span className="text-[#00aa8a]">designed for your future</span>
             </h3>
           </div>
           <div className="md:w-1/2 text-center md:text-left">
-            <p className="text-lg text-text-secondary border-t-4 md:border-t-0 md:border-l-4 border-primary pt-4 md:pt-0 md:pl-6 py-2 inline-block md:block">
+            <p className="text-lg text-text-secondary border-t-4 md:border-t-0 md:border-l-4 border-[#00aa8a] pt-4 md:pt-0 md:pl-6 py-2 inline-block md:block">
               This program is offered within the framework of vocational high school, specifically grades 10/11 and 12 for the 14-17 age group.
             </p>
           </div>
@@ -117,7 +117,7 @@ export function CareerOpportunities() {
         {/* Eyebrow and Main Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-semibold tracking-widest text-primary uppercase mb-2">You Can Learn Here</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark">Your Career Path</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark">Your Career <span className="text-[#00aa8a]">Path</span></h2>
         </div>
  
         {/* Content Rows */}
@@ -160,7 +160,7 @@ export function CareerOpportunities() {
                   <div className="space-y-2.5 pt-1">
                     {path.bullets.map((bullet, bIdx) => (
                       <div key={bIdx} className="flex items-center justify-center md:justify-start gap-3">
-                        <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                        <div className="w-5 h-5 rounded-full bg-[#00aa8a] flex items-center justify-center flex-shrink-0">
                           <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                           </svg>
@@ -288,7 +288,7 @@ export function Instructors() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark">Meet Our Expert Instructors</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-dark">Meet Our Expert <span className="text-[#00aa8a]">Instructors</span></h2>
           <p className="text-text-secondary text-base max-w-lg mx-auto mt-2">Learn directly from highly qualified healthcare professionals with years of German and regional clinical experience.</p>
         </div>
 
@@ -412,7 +412,7 @@ export function FAQ({ onContactClick }: { onContactClick?: () => void }) {
           <div className="lg:col-span-5 text-left">
             <p className="text-sm font-semibold tracking-widest text-primary uppercase mb-2">FAQ</p>
             <h2 className="text-3xl md:text-4xl font-bold text-primary-dark font-heading leading-tight mb-4">
-              Quick answers to important questions
+              Quick answers to <span className="text-[#00aa8a]">important questions</span>
             </h2>
             <p className="text-text-secondary text-base leading-relaxed mb-6">
               Find essential details about academic structure, European qualification standards, language integration, and practical rotations below.
@@ -469,7 +469,7 @@ export function FAQ({ onContactClick }: { onContactClick?: () => void }) {
 
 export function CTAAndFooter({ onApplyClick }: { onApplyClick?: () => void }) {
   return (
-    <footer className="bg-[#0c0a3e] pt-20 pb-10 mt-12 text-center md:text-left">
+    <footer className="bg-[#162f7a] pt-20 pb-10 mt-12 text-center md:text-left">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-1 flex flex-col items-center md:items-start">
@@ -479,7 +479,7 @@ export function CTAAndFooter({ onApplyClick }: { onApplyClick?: () => void }) {
             <ul className="space-y-4 w-full flex flex-col items-center md:items-start">
               <li className="flex items-start gap-3 text-white/60 justify-center md:justify-start text-left md:text-left">
                 <MapPin size={20} className="shrink-0 text-white mt-1" />
-                <span>Ukshin Hoti Street, Prishtina, Kosovo</span>
+                <span>Ukshin Hoti Street, Prishtina, Kosova</span>
               </li>
               <li className="flex items-center gap-3 text-white/60 justify-center md:justify-start">
                 <Phone size={20} className="shrink-0 text-white" />
@@ -522,7 +522,7 @@ export function CTAAndFooter({ onApplyClick }: { onApplyClick?: () => void }) {
             <div className="mt-8 w-full max-w-xs md:max-w-none">
               <button 
                 onClick={onApplyClick}
-                className="bg-success hover:bg-green-500 text-white px-8 py-3 rounded-full font-bold transition-colors shadow-lg cursor-pointer w-full text-center"
+                className="bg-[#00aa8a] hover:bg-[#00967a] text-white px-8 py-3 rounded-full font-bold transition-colors shadow-lg cursor-pointer w-full text-center"
               >
                 APPLY NOW
               </button>

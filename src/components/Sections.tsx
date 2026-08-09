@@ -37,7 +37,8 @@ export function ProgramDetails() {
         <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
           <div className="md:w-1/2 text-center md:text-left">
             <h3 className="text-3xl md:text-4xl font-bold text-primary-dark leading-tight font-heading">
-              A modern curriculum<br/> <span className="text-[#00aa8a]">designed for your future</span>
+              A modern curriculum<br />
+              designed <span className="text-[#00aa8a]">for your future</span>
             </h3>
           </div>
           <div className="md:w-1/2 text-center md:text-left">

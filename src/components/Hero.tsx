@@ -112,10 +112,10 @@ export function Hero({ onApplyClick }: { onApplyClick?: () => void }) {
           </div>
 
           {/* Left light gradient mask ensuring clean legibility for overlay text */}
-          <div className="absolute inset-0 z-1 bg-gradient-to-r from-white/95 via-white/85 to-transparent sm:from-white/90 sm:via-white/60 lg:via-white/30 max-w-full sm:max-w-[70%] pointer-events-none" />
+          <div className="absolute inset-0 z-1 bg-gradient-to-r from-white/95 via-white/85 to-transparent sm:from-white/90 sm:via-white/60 lg:via-white/30 max-w-full sm:max-w-[75%] lg:max-w-[70%] pointer-events-none" />
           
           {/* Slide Text Content Overlay */}
-          <div className="relative z-10 w-full sm:w-[68%] lg:w-[55%] p-5 sm:p-10 lg:p-16 flex flex-col justify-center h-full">
+          <div className="relative z-10 w-full sm:w-[70%] lg:w-[62%] xl:w-[65%] p-5 sm:p-10 lg:p-16 flex flex-col justify-center h-full">
             {slides.map((slide, index) => (
               <div
                 key={index}
@@ -131,7 +131,7 @@ export function Hero({ onApplyClick }: { onApplyClick?: () => void }) {
                 </span>
 
                 {/* Main Program Title */}
-                <h1 className="font-sans font-extrabold uppercase text-[#0084FF] text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.6rem] leading-[1.1] sm:leading-tight my-1.5 sm:my-3 max-w-lg">
+                <h1 className="font-sans font-extrabold uppercase text-[#0084FF] text-lg sm:text-2xl md:text-3xl lg:text-[2.7rem] xl:text-[3.1rem] leading-[1.08] my-1.5 sm:my-3 max-w-xl xl:max-w-2xl">
                   {slide.title}
                 </h1>
 

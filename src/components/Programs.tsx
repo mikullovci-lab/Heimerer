@@ -2,22 +2,22 @@ export function Programs({ onApplyClick }: { onApplyClick?: (programId: string) 
   const programs = [
     {
       id: "nursing",
-      title: "Nursing Associate",
-      titleSq: "Bashkëpunëtor Profesional i Infermierisë",
+      title: "Professional Nursing Associate",
+      subtitle: "Nursing Associate Program",
       img: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=600&h=400&fit=crop&q=80",
       desc: "Acquire hands-on training and clinical knowledge based on rigorous German nursing standards.",
     },
     {
       id: "lab",
-      title: "Laboratory Technician",
-      titleSq: "Teknik i Laboratorit Mjekësor",
+      title: "Medical Laboratory Technician",
+      subtitle: "Laboratory Technology Program",
       img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=400&fit=crop&q=80",
       desc: "Master diagnostic technology, specimen analysis, and clinical chemistry in modern lab settings.",
     },
     {
       id: "physio",
       title: "Physiotherapy Assistant",
-      titleSq: "Asistent i Fizioterapisë",
+      subtitle: "Physiotherapy Program",
       img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop&q=80",
       desc: "Learn physical rehabilitation, kinesiology, and patient support under licensed clinical guidance.",
     }
@@ -47,8 +47,8 @@ export function Programs({ onApplyClick }: { onApplyClick?: (programId: string) 
               </div>
               <div className="p-6 text-left relative bg-surface flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-primary-dark mb-1 leading-snug">{prog.titleSq}</h3>
-                  <p className="text-xs text-text-secondary font-medium mb-3">{prog.title}</p>
+                  <h3 className="text-lg font-bold text-primary-dark mb-1 leading-snug">{prog.title}</h3>
+                  <p className="text-xs text-text-secondary font-medium mb-3">{prog.subtitle}</p>
                   <p className="text-text-secondary leading-relaxed text-sm">
                     {prog.desc}
                   </p>

@@ -208,7 +208,7 @@ export function ApplicationModal({ isOpen, onClose, initialProgram }: Applicatio
                   Application Submitted Successfully!
                 </h3>
                 <p className="text-sm sm:text-base text-text-secondary max-w-md leading-relaxed mb-8">
-                  Thank you for applying. We have received your request for the <strong className="text-primary-dark">{selectedProgObj?.titleSq}</strong> program. Our admissions team will contact you shortly via phone or email.
+                  Thank you for applying. We have received your request for the <strong className="text-primary-dark">{selectedProgObj?.title}</strong> program. Our admissions team will contact you shortly via phone or email.
                 </p>
 
                 <div className="w-full max-w-md bg-bg border border-border/40 rounded-2xl p-5 mb-8 text-left space-y-2">
@@ -261,9 +261,8 @@ export function ApplicationModal({ isOpen, onClose, initialProgram }: Applicatio
                             </div>
                             
                             <div className="space-y-1 pr-6">
-                              <h4 className="font-bold text-primary-dark text-base sm:text-lg leading-snug">{prog.titleSq}</h4>
-                              <p className="text-xs text-text-secondary font-medium">{prog.title}</p>
-                              <p className="text-xs text-text-secondary leading-relaxed pt-1.5">{prog.description}</p>
+                              <h4 className="font-bold text-primary-dark text-base sm:text-lg leading-snug">{prog.title}</h4>
+                              <p className="text-xs text-text-secondary leading-relaxed pt-1">{prog.description}</p>
                             </div>
 
                             <div className={`absolute top-5 right-5 w-5 h-5 rounded-full border flex items-center justify-center transition-colors ${

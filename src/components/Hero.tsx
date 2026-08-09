@@ -11,6 +11,33 @@ interface SlideData {
   buttonText: string;
 }
 
+function AnimatedCounter({ end, suffix = "" }: { end: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTimestamp: number | null = null;
+    const duration = 1800; // 1.8 seconds ease out counter
+
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(easeOut * end));
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        setCount(end);
+      }
+    };
+
+    const animFrame = window.requestAnimationFrame(step);
+    return () => window.cancelAnimationFrame(animFrame);
+  }, [end]);
+
+  return <>{count}{suffix}</>;
+}
+
 export function Hero({ onApplyClick }: { onApplyClick?: () => void }) {
   const [imgUrls, setImgUrls] = useState<string[]>([
     "/images/hero1.jpg",
@@ -89,7 +116,7 @@ export function Hero({ onApplyClick }: { onApplyClick?: () => void }) {
       <div className="max-w-[96%] xl:max-w-[1400px] mx-auto px-2 sm:px-6 lg:px-8">
         
         {/* Full-width container with ~35% height reduction on mobile (min-h-[290px] sm:min-h-[380px] lg:min-h-0 lg:aspect-[2.2/1]) */}
-        <div className="relative bg-white rounded-[1.8rem] sm:rounded-[2.5rem] flex flex-col justify-center overflow-hidden border border-border/40 min-h-[290px] sm:min-h-[380px] lg:min-h-0 lg:aspect-[2.2/1] group shadow-sm">
+        <div className="relative bg-white rounded-[1.8rem] sm:rounded-[2.5rem] flex flex-col justify-center overflow-hidden border border-border/40 min-h-[290px] sm:min-h-[380px] lg:min-h-0 lg:aspect-[2.2/1] group shadow-none">
           
           {/* Background image slider */}
           <div className="absolute inset-0 w-full h-full z-0">
@@ -139,7 +166,7 @@ export function Hero({ onApplyClick }: { onApplyClick?: () => void }) {
                 <div className="mt-1 sm:mt-2">
                   <button
                     onClick={onApplyClick}
-                    className={`inline-flex items-center justify-center px-5 py-2 sm:px-7 sm:py-2.5 rounded-full text-white font-black text-[11px] sm:text-xs lg:text-sm uppercase tracking-wider shadow-md ${slide.buttonColor} ${slide.buttonHoverColor} hover:shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer active:scale-95`}
+                    className={`inline-flex items-center justify-center px-5 py-2 sm:px-7 sm:py-2.5 rounded-full text-white font-black text-[11px] sm:text-xs lg:text-sm uppercase tracking-wider ${slide.buttonColor} ${slide.buttonHoverColor} transition-all transform hover:-translate-y-0.5 cursor-pointer active:scale-95`}
                   >
                     {slide.buttonText}
                   </button>
@@ -164,7 +191,7 @@ export function Hero({ onApplyClick }: { onApplyClick?: () => void }) {
           </div>
 
           {/* Navigation Controls */}
-          <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6 z-20 flex items-center gap-2 sm:gap-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 sm:px-4 sm:py-2.5 rounded-full border border-border/50 shadow-sm opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6 z-20 flex items-center gap-2 sm:gap-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 sm:px-4 sm:py-2.5 rounded-full border border-border/50 opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
             <button 
               onClick={handlePrev}
               className="p-1 hover:bg-gray-100 rounded-full transition-colors cursor-pointer text-primary-dark"
@@ -204,24 +231,30 @@ export function Hero({ onApplyClick }: { onApplyClick?: () => void }) {
 
       {/* Stats block overlapping the hero */}
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 relative -mt-6 sm:-mt-8 lg:-mt-10 z-20">
-        <div className="bg-white rounded-2xl p-3.5 sm:p-4 lg:p-5 flex flex-row justify-between items-center gap-2 border border-border/50 shadow-[0_1px_3px_rgba(0,0,0,0),_0_1px_25px_-1px_rgba(0,0,0,0.08)]">
+        <div className="bg-white rounded-2xl p-3.5 sm:p-4 lg:p-5 flex flex-row justify-between items-center gap-2 border border-border/50 shadow-[0_1px_3px_0_rgba(0,0,0,0),_0_1px_25px_-1px_rgba(0,0,0,0.08)]">
           
           <div className="text-center flex-1">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-primary-dark">95%</div>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-primary-dark">
+              <AnimatedCounter end={95} suffix="%" />
+            </div>
             <div className="text-text-secondary text-[9px] sm:text-[10px] lg:text-xs font-semibold uppercase tracking-wider mt-0.5">Employment Rate</div>
           </div>
           
           <div className="w-px h-8 bg-border/80"></div>
           
           <div className="text-center flex-1">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-primary-dark">500+</div>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-primary-dark">
+              <AnimatedCounter end={500} suffix="+" />
+            </div>
             <div className="text-text-secondary text-[9px] sm:text-[10px] lg:text-xs font-semibold uppercase tracking-wider mt-0.5">Active Students</div>
           </div>
           
           <div className="w-px h-8 bg-border/80"></div>
           
           <div className="text-center flex-1">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-primary-dark">20+</div>
+            <div className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-primary-dark">
+              <AnimatedCounter end={20} suffix="+" />
+            </div>
             <div className="text-text-secondary text-[9px] sm:text-[10px] lg:text-xs font-semibold uppercase tracking-wider mt-0.5">Clinical Partners</div>
           </div>
           
